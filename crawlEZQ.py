@@ -13,7 +13,7 @@ timeDelay = config.get("general","time")
 db_url = config.get("general","db_url")
 mongoClient = pymongo.MongoClient(str(db_url))
 mongoDatabase = mongoClient["local"]
-databaseCollections = mongoDatabase["easy_quiz_log"]
+databaseCollections = mongoDatabase["ezquiz"]
 while True:
     rawResponse = requests.get("https://api.quizpoly.xyz/quizpoly/using")   
     if(rawResponse.status_code==200):
